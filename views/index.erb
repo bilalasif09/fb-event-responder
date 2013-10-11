@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+	<head>
+		<%= erb :_partial %>
+
+	</head>
+
+	<body>
+
+		<% if @feed %>
+			<div  class="news_feed" align="center">
+
+				<%@feed.each do |post|%>
+					<div align="center" class="feed_story">
+								<%details=post['details']%>
+								<%if !details.nil?%>
+									<div class="name_pro_pic">
+										<a href="http://www.facebook.com/<%=details['from']['id']%>"><img class="image_dim" src="<%=post['profile_pic']%>" />	</a>
+										<b class="name">
+											<a href="http://www.facebook.com/<%=details['from']['id']%>"> <%=details['from']['name']%> </a> </b>
+									</div>
+								<%end%>
+						 <div class="message"><%=post['message']%> <%=post['description']%></div>
+						<%if !details.nil?%>
+							<img class="shared_pic" src="<%=details['picture']%>">	
+						<%end%>
+						<div class="com_div">
+							<img class="com_icon" src="com_icon.png" height="20" width="20"> 
+							<%a=post['comment_info']%><%=a['comment_count']%> 
+							<img class="like_icon" src="like_icon.jpeg" height="20" width="20">
+							<%b=post['like_info']%><%=b['like_count']%>
+						</div>
+						<div class="show_comments">
+							<%
+								comments = (details and details['comments'] and details['comments']['data']) ? details['comments']['data'] : []
+								comments.each do |comment|
+							%>
+							<div class="single_comment">
+								<div class="com_name">
+									<img src="http://graph.facebook.com/<%=comment['from']['id']%>/picture" height="50" width="50"> 
+									<a href="http://www.facebook.com/<%=comment['from']['id']%>"><%= comment['from']['name'] %></a></div>
+								<div class="comment_text"><%= comment['message'] %></div>
+							</div>
+							<%
+								end
+							%>
+						</div>
+
+					</div>
+				<% end %>
+
+			</div>
+		<% else %>
+			<h2>Please login</h2>
+		<% end %>
+		</br>	
+
+	</body>
+
+</html>
+

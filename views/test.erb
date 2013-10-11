@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title> Authorize </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="jquery.js"></script>
+		<script>
+			function auth_fun(code){
+				$.ajax({
+					url: '/get_token',
+					type: 'POST',
+					data: {code: code},
+					success: function(data){
+						alert(data);
+					}
+				});
+
+			}
+		</script>
+
+		<body>
+			
+			<a href='/get_token?code=<%=@code%>'> Authorize</a> 
+		</body>
+
+	</head>
+</html>

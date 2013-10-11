@@ -1,0 +1,258 @@
+
+.topbar {
+	background-color: #3763A2;
+	display: block;
+	height: 47px;
+	padding-left: 12%;
+	width: 100%;
+}
+#tofacebook {
+	color: #FFFFFF;
+	font-size: 40px;
+	font-weight: bolder;
+	text-decoration: none;
+}
+#tofacebook:hover {
+	background-color: #77A3E2;
+}
+#toindex {
+	color: #FFFFFF;
+	font-size: 30px;
+	font-style: italic;
+	font-weight: bolder;
+	margin-left: 12%;
+	margin-right: 12%;
+	text-decoration: none;
+}
+#toindex:hover {
+	background-color: #77A3E2;
+}
+.topbarlink {
+	color: #C0C0C0;
+	font-size: large;
+	margin-left: 5px;
+	margin-right: 5px;
+	text-decoration: none;
+}
+.maincontent {
+	margin-left: 12%;
+	margin-top: 50px;
+	min-width: 90%;
+}
+.indexcontent {
+	min-width: 100%;
+}
+#indextableheader {
+	color: #333333;
+	font-size: 40px;
+	padding: 10px;
+	width: 100%;
+}
+#indextableheader1 {
+	font-size: 35px;
+}
+.indexcontent tr {
+	margin-top: 30px;
+}
+pic {
+	bottom: 100px;
+	position: absolute;
+}
+.indexcontent td {
+	color: #555555;
+	font-size: 25px;
+	padding: 10px;
+	text-align: center;
+	vertical-align: top;
+	width: 33%;
+}
+.indexcontent td b {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+.buttonlink {
+	-moz-user-select: none;
+	background: none repeat scroll 0 0 #2A49A5;
+	border: 1px solid #082783;
+	box-shadow: 0 1px #4C6BC7 inset;
+	color: #FFFFFF;
+	font: 20px Verdana,sans-serif;
+	padding: 3px 5px;
+	text-decoration: none;
+	text-shadow: 0 -1px 0 #082783;
+}
+.buttonlink1 {
+	-moz-user-select: none;
+	background: none repeat scroll 0 0 #2A49A5;
+	border: 1px solid #082783;
+	box-shadow: 0 1px #4C6BC7 inset;
+	color: #FFFFFF;
+	font: 14px Verdana,sans-serif;
+	padding: 5px;
+	position: relative;
+	text-decoration: none;
+	text-shadow: 0 -1px 0 #082783;
+	top: -10px;
+}
+.eventcontenttable {
+	height: 100%;
+	width: 100%;
+}
+.title {
+	color: #444444;
+	font-size: 35px;
+}
+.post {
+	font-size: 18px;
+}
+ul {
+	list-style-type: none;
+}
+.second {
+	border: 1px dotted #333333;
+	margin: 20px;
+	padding: 20px;
+}
+.news_feed {
+	left: 413px;
+	margin-top: 40px;
+	position: relative;
+	text-align: center;
+	width: 750px;
+}
+.name {
+	color: #3763A2;
+	font-family: helvetica;
+	font-size: 13px;
+}
+.name_pro_pic {
+	bottom: -10px;
+	left: -240px;
+	position: relative;
+}
+.my_pic {
+	left: 783px;
+	position: relative;
+	top: -30px;
+}
+.message {
+	left: -81px;
+	margin: 20px 70px 20px 90px;
+}
+.image_dim {
+}
+.shared_pic {
+}
+body {
+	background-color: #EEEEEE;
+	width: 86%;
+}
+.comment_div {
+	display: none;
+}
+.com_icon{
+	margin-top: 10px;
+}
+.show_comments{
+	
+}
+.com_name{
+	font-size: 10px;
+	margin-left: 10px;
+	margin-right: 5px;
+	position: absolute;
+	margin-top: 4px;
+}
+.single_comment{
+	background-color: #FFFFFF;
+	height: 80px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.comment_text{
+	text-align: left;
+	width: 380px;
+}
+.like_icon{
+margin-left: 10px;
+margin-top: 10px;
+}
+.posts {
+	color: #006699;
+	font-size: 25px;
+}
+.dropdown {
+	color: #555555;
+	height: 17px;
+	margin: 3px -22px 0 0;
+	position: relative;
+	text-align: left;
+	width: 143px;
+}
+.submenu {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border-radius: 6px 6px 6px 6px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+	display: none;
+	left: -20px;
+	margin-left: 10px;
+	padding: 40px 0 5px;
+	position: absolute;
+	top: -12px;
+	width: 135px;
+	z-index: 100;
+}
+.dropdown li a {
+	color: #555555;
+	cursor: pointer;
+	display: block;
+	font-family: arial;
+	font-weight: bold;
+	padding: 6px 15px;
+	text-decoration: none;
+}
+.dropdown li a:hover {
+	background: none repeat scroll 0 0 #155FB0;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.account {
+	background: url("icons/arrow.png") no-repeat scroll 116px 17px rgba(0, 0, 0, 0);
+	color: #FFFFFF;
+	cursor: pointer;
+	display: block;
+	font-size: 16px;
+	height: 28px;
+	line-height: 16px;
+	margin: -11px 0 0 -10px;
+	padding: 11px 0 0 20px;
+	position: absolute;
+	text-decoration: none;
+	width: 121px;
+	z-index: 110;
+}
+.root {
+	border-top: 1px solid #DEDEDE;
+	font-size: 11px;
+	list-style: none outside none;
+	margin: 0;
+	padding: 11px 0 0;
+}
+.align {
+	float: right;
+}
+.feed_story:nth-child(2n+1) {
+	background-color: #ECF6F6;
+	color: #000000;
+	margin-bottom: 20px;
+}
+.feed_story:nth-child(2n) {
+	background-color: #ECF6F6;
+	color: #000000;
+	margin-bottom: 20px;
+}
+.com_div {
+	background-color: white;
+	margin-top: 20px;
+}
+

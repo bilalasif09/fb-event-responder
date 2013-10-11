@@ -1,0 +1,22 @@
+body
+{
+	background-color: black; 
+	color: #800000;
+	font-family: Helvetica;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+p 
+{
+	color: blue;
+}
+
+.comment_div
+{
+	display:none;
+}
+
+

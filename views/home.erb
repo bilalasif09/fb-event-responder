@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<link rel="stylesheet" type="text/css" href="Stylesheet.css">
+
+<title>Facebook Responder Home</title>
+
+<script>
+function Home_page(){
+	top.location.href = '/';
+}
+
+function Best_friends_page(){
+	window.location.href = '/friends';
+}
+
+function Bday_resp_page(){
+	window.location.href = '/b_day';	
+}
+
+function Tagged_photos_page(){
+	window.location.href = '/photos';	
+}
+</script>
+
+
+
+</head>
+
+<body>
+<div class="topbar" >
+
+<a id="tofacebook" href="http://www.facebook.com"> facebook </a>
+
+<button class="buttonlink1" onclick="Home-page()"> Home </button>
+
+
+
+<button class="buttonlink1" onclick="Best_friends_page();"> Status and Posts </button>
+
+<button class="buttonlink1" onclick="Bday_resp_page();"> Event Responder </button>
+
+<button class="buttonlink1" onclick="Tagged_photos_page();"> Tagged Photos </button>
+
+<a class="buttonlink1" href='/login'>login with facebook<a>
+</div>
+
+
+
+
+
+<div class="maincontent">
+
+<table class="indexcontent">
+
+<tr>
+
+<th id="indextableheader" colspan="3">
+
+Welcome to <i>Facebook Responder</i>.</br><span id="indextableheader1">Save your effort by easy like and comment tools for Facebook.</span>
+
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+
+<b>Status and Posts</b> </br></br> We filter out your statuses and posts in a seperate window where you can go check them and comment to them, saving time of scrolling on your wall</br>
+
+</td>
+
+
+
+<td>
+
+<b>Event Responder</b> </br></br> Respond to birthday wishes, greetings and other posts rushing your wall in simple, short and easy way. Like and comment posts batch wise</br>
+
+</td>
+
+
+
+<td>
+
+<b>Tagged Photos</b> </br></br> Check your recent photo tags by your facebook friends. View those photos and their stories at a seperate window by saving your precious time.</br>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<button class="buttonlink" onclick="Best_friends_page();"> Visit </button>
+
+</td>
+
+
+
+<td>
+
+<button class="buttonlink" onclick="Bday_resp_page();"> Visit </button>
+
+</td>
+
+
+
+<td>
+
+<button class="buttonlink" onclick="Tagged_photos_page();"> Visit </button>
+
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+
+</body>
+
+</html>
+

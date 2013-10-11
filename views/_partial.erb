@@ -1,0 +1,112 @@
+<html>
+	<head>
+	
+<title>Facebook Responder Home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<link rel="stylesheet" type="text/css" href="Stylesheet.css">
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
+</script>
+
+<script type="text/javascript" >
+	$(document).ready(function()
+			{
+
+			$(".account").click(function()
+				{
+				var X=$(this).attr('id');
+				if(X==1)
+				{
+				$(".submenu").hide();
+				$(this).attr('id', '0');
+				}
+				else
+				{
+				$(".submenu").show();
+				$(this).attr('id', '1');
+				}
+
+				});
+
+			//Mouse click on sub menu
+			$(".submenu").mouseup(function()
+				{
+				return false
+				});
+
+			//Mouse click on my account link
+			$(".account").mouseup(function()
+					{
+					return false
+					});
+
+
+			//Document Click
+			$(document).mouseup(function()
+					{
+					$(".submenu").hide();
+					$(".account").attr('id', '');
+					});
+			});
+		</script>
+
+
+
+
+<script>
+
+function Best_friends_page(){
+	window.location.href = '/';
+}
+
+function Bday_resp_page(){
+	window.location.href = '/b_day';	
+}
+
+function Tagged_photos_page(){
+	window.location.href = '/photos';	
+}
+</script>
+
+
+
+</head>
+
+<body>
+<div class="topbar" >
+
+<a id="tofacebook" href="http://www.facebook.com"> facebook </a>
+
+<% unless logged_in? %>
+	<a class="buttonlink1" href='/login'>login with facebook<a>
+<% end %>
+</div>
+
+<% if logged_in? %>
+<div class="topbar" >
+<button class="buttonlink1" onclick="Best_friends_page()"> Status and Posts </button>
+<button class="buttonlink1" onclick="Bday_resp_page()"> Event Responder </button>
+<button class="buttonlink1" onclick="Tagged_photos_page()"> Tagged Photos </button>
+
+
+<img class="my_pic" src="me.jpg" height=50 width=50>
+
+<div class="dropdown align">
+	<a class="account" >Bilal Asif</a>
+
+	<div class="submenu">
+		<ul class="root">
+			<li ><a href="/logout" >Logout</a></li>
+			<li ><a href="#Profile" >Profile</a></li>
+			<li ><a href="#settings">Settings</a></li>
+			<li ><a href="#feedback">Send Feedback</a></li>
+		</ul>
+	</div>
+
+</div>
+
+</div>
+<%end%>
+</body>
+</html>

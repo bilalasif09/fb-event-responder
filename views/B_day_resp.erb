@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<link rel="stylesheet" type="text/css" href="Stylesheet.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="jquery.js"></script>
+<title>Facebook Responder Events</title>
+<script>
+
+function post_like(){
+	$.ajax({
+url: '/b_day_like',
+type: 'POST',
+success: function(){
+alert(2);
+}
+});
+}
+
+function post_comment(comment){
+	$.ajax({
+url: '/b_day_comment',
+type: 'POST',
+data: {comment: comment}, 
+success: function(){
+	alert(3);
+}
+});
+}
+
+//$(function(){
+
+//$(".buttonlink1").click(function(){
+//	post_like();
+//});
+
+//}); // on ready end
+
+
+
+
+</script>
+
+<%= erb :_partial %>
+</head>
+
+<body>
+
+
+<div class="maincontent">
+
+<table class="eventcontenttable" id="postlist">
+
+<tr>
+
+<td style="width: 60%; max-width: 60%;">
+
+</br>
+
+<div class="title">Event Responder</div></br></br>
+
+<ul class="post" id="postlist">
+	<% @feed_key.each do |f| %>
+	  <% if f['type']=='status'%>
+		<% if f['message']=="bla bla bla" %>
+		<% a=f['from'] %>
+		<li> <b class="name">Name :<%=a['name']%></b></li>
+		<li> <b class="name">Post :<%=f['message']%></b></li>
+		<% end %>
+	 <% end %>
+	<% end %>
+
+
+
+</br>	
+
+</ul>
+
+</td>
+
+<td >
+
+<div class="second">
+Like All:</br>
+	<button class="buttonlink1" onclick="post_like();">Like All</button>
+
+
+</br>
+
+</br>
+
+
+
+Comment these posts:</br>
+
+			<textarea cols="20" rows="1" placeholder="Type in the text"></textarea>
+			<button class="submit_comment" onclick="post_comment($(this).siblings('textarea').val());">Submit</button>
+</div>
+
+</td>
+
+</tr>
+
+</table>	
+
+</div>
+
+</body>
+
+</html>
+
+
+

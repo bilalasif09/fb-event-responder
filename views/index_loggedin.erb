@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<link rel="stylesheet" type="text/css" href="Stylesheet.css">
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<link rel="stylesheet" type="text/css" href="Stylesheet.css">
+
+<title>Facebook Responder Events</title>
+<script src="jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+	
+function Home_page(){
+	top.location.href='/';
+}
+
+function Best_friends_page(){
+	top.location.href = '/friends';
+}
+
+function Bday_resp_page(){
+	top.location.href = '/b_day';	
+}
+
+function Tagged_photos_page(){
+	top.location.href = '/photos';	
+}
+</script>
+
+
+<script>
+function post_comment(post_id,comment){
+$.ajax({
+  url: '/reply',
+  type: 'POST',
+  data: {post_id: post_id, comment: comment},
+  success: function(data){
+  alert(data);
+  }
+});
+
+}
+
+$(function(){
+
+		$(".reply").click(function(){
+			$(this).show().siblings('.comment_div').fadeIn();
+			console.log(this);
+			console.log($(this));
+			});
+
+		$('.submit_comment').click(function(){
+			console.log(this);
+			$(this).show().parent().fadeOut();
+			var a=$(this).siblings("textarea");
+			var comment=a.val();
+			console.log(this);
+			});
+
+		token = $('#token').html();
+		}); // on ready end
+</script>
+
+
+</head>
+
+<body>
+<div class="topbar" >
+
+<a id="tofacebook" href="http://www.facebook.com"> facebook </a>
+
+<button class="buttonlink1" onclick="Best_friends_page()"> Status and Posts </button>
+<button class="buttonlink1" onclick="Bday_resp_page()"> Event Responder </button>
+<button class="buttonlink1" onclick="Tagged_photos_page()"> Tagged Photos </button>
+<div class="dropdown align">
+<a class="account" >Bilal Asif</a>
+
+	<div class="submenu">
+		<ul class="root">
+			<li ><a href="/logout" >Logout</a></li>
+			<li ><a href="#Profile" >Profile</a></li>
+			<li ><a href="#settings">Settings</a></li>
+			<li ><a href="#feedback">Send Feedback</a></li>
+		</ul>
+	</div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="maincontent">
+
+</br>
+
+<div class="title">Best Friends</div></br></br>
+
+</div>
+
+</body>
+
+</html>
+
+
+
